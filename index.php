@@ -15,7 +15,7 @@
       }
     </style>
 </head>
-<body class="bg-gradient-to-br from-[#77c2f7] to-[#d98bf7]">
+<body class="bg-gradient-to-br from-[#77c2f7] to-[#d98bf7] ">
 
 <nav class="shadow">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
