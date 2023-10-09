@@ -1,3 +1,13 @@
+<?php
+
+require("async/config.php");
+
+if (check_login()) {
+    header("Location: /dashboard"); exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,7 +73,7 @@
                         </div>
                         <div>
                             <label for="birthdate"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Birth Date</label>
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Birthdate</label>
                             <div class="relative max-w-sm">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"

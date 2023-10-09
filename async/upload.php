@@ -10,14 +10,14 @@ if (isset($_FILES['data'])) {
 
         if (is_uploaded_file($tmpFile)) {
             if(move_uploaded_file($tmpFile, $imgPath . $imgName)) {
-            header("Location: ../upload.php?status=success"); exit;
+            header("Location: ../dashboard/?status=success"); exit;
         }
         } else {
-            header("Location: ../uploaded.php?status=error"); exit;
+            header("Location: ../dashboard/?status=error"); exit;
         }
     
     } else {
-        header("Location: ../upload.php?status=format"); exit;
+        header("Location: ../dashboard/?status=format"); exit;
     }
 
 }

@@ -1,10 +1,20 @@
+<?php
+
+require("../async/config.php");
+
+if (!check_login()) {
+    header("Location: ../login.php"); exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload data - Sport Track</title>
+    <title>Dashboard - Sport Track</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,7 +68,7 @@ if (isset($_GET['status'])) {
         </div>
 <?php } } ?>
             <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">Upload your data</h1>
-            <form action="async/upload.php" method="post" class="flex items-center justify-center w-full mt-6" id="form" enctype="multipart/form-data">
+            <form action="../async/upload.php" method="post" class="flex items-center justify-center w-full mt-6" id="form" enctype="multipart/form-data">
 
             <label for="data" class="flex flex-col items-center justify-center w-full sm:w-11/12 h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                 <div class="flex flex-col items-center justify-center pt-5 pb-6">
@@ -71,6 +81,16 @@ if (isset($_GET['status'])) {
                 <input id="data" name="data" type="file" class="hidden" onchange="document.getElementById('form').submit();"/>
             </label>
         </form>
+        <div class="mt-5">
+        <a href="../logout.php" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 font-medium rounded-full text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600">
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+        </svg>
+
+        Log out
+        </a>
+        </div>
     </div>
     </section>
 </body>

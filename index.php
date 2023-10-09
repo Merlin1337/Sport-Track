@@ -182,7 +182,7 @@
 </section>
       <footer>
         <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-          <p class="mt-8 text-center text-base text-black">&copy; 2023 Sport Track</p>
+          <p class="mt-8 text-center text-base text-black">&copy; <?=date("Y"); ?> Sport Track</p>
         </div>
       </footer>
       
