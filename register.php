@@ -127,14 +127,14 @@
                                         href="#">Terms and Conditions</a></label>
                             </div>
                         </div>
-                        <div class="text-center justify-center">
-                            <div class="g-recaptcha" data-sitekey="6LckjHUoAAAAAPre1ofPGHnt1R4UUkg8ofhdnlgb"></div>
+                        <div class="text-center">
+                            <div class="g-recaptcha inline-block" data-sitekey="6LckjHUoAAAAAPre1ofPGHnt1R4UUkg8ofhdnlgb"></div>
                         </div>
                         <button type="submit"
                             class="w-full text-white bg-[#b67df0] hover:bg-[#ae6cf0] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create
                             an account</button>
                         <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                            Already have an account? <a href="login.html"
+                            Already have an account? <a href="login.php"
                                 class="font-medium text-[#b67df0] hover:underline dark:text-primary-500">Login here</a>
                         </p>
                     </form>
