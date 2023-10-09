@@ -34,7 +34,7 @@
                         class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                         Create an account
                     </h1>
-                    <form class="space-y-4 md:space-y-6" action="#">
+                    <form class="space-y-4 md:space-y-6" method="POST" action="async/register.php">
                         <div>
                             <label for="lastname"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
@@ -43,16 +43,16 @@
                                 placeholder="Dupont" required="">
                         </div>
                         <div>
-                            <label for="firsrname"
+                            <label for="firstname"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
-                            <input type="text" name="firsrname" id="firsrname"
+                            <input type="text" name="firstname" id="firstname"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-purple-600 focus:border-purple-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="Jean" required="">
                         </div>
                         <div>
                             <label for="gender"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choose a gender</label>
-                            <select  id="gender"
+                            <select name="gender" id="gender"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                                 <option selected disabled>Select an
                                     option</option>
@@ -62,7 +62,7 @@
                             </select>
                         </div>
                         <div>
-                            <label for="firsrname"
+                            <label for="birthdate"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Birth Date</label>
                             <div class="relative max-w-sm">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
@@ -72,7 +72,7 @@
                                             d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                     </svg>
                                 </div>
-                                <input datepicker datepicker-autohide datepicker-format="dd/mm/yyyy" type="text"
+                                <input name="birthdate" id="birthdate" datepicker datepicker-autohide datepicker-format="dd/mm/yyyy" type="text"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Select date">
                             </div>
@@ -103,7 +103,7 @@
                         <div>
                             <label for="password"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                            <input type="password" name="password" id="password" placeholder="••••••••"
+                            <input minlength="8" type="password" name="password" id="password" placeholder="••••••••"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required="">
                         </div>
@@ -111,7 +111,7 @@
                             <label for="confirm-password"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm
                                 password</label>
-                            <input type="password" name="confirm-password" id="confirm-password" placeholder="••••••••"
+                            <input minlength="8" type="password" name="confirm-password" id="confirm-password" placeholder="••••••••"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required="">
                         </div>
