@@ -33,214 +33,254 @@ if (!check_login()) {
     </style>
 </head>
 
-<body class="bg-gradient-to-br from-[#66ed7d] to-[#b67df0] h-screen">
+<body class="bg-gradient-to-br from-[#66ed7d] to-[#b67df0] h-max">
 
+<nav class="border-b border-gray-200 dark:border-gray-600">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="#" class="flex items-center text-xl font-semibold text-gray-900"
+                style="font-family: 'Russo One', sans-serif; letter-spacing: 3px;">
+                <img class="w-8 h-8 mr-2" src="../assets/img/logo.png" alt="logo">
+                Sport Track
+            </a>
+  <div class="flex md:order-2">
+      <button type="button" class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
+      <li>
+        <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:text-white dark:border-gray-700">About</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:text-white dark:border-gray-700">Services</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-whitedark:hover:text-white  dark:border-gray-700">Contact</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
 
-                <div class="grid grid-cols-1 px-4 pt-6 xl:grid-cols-3 xl:gap-4">
-                    <!-- Right Content -->
-                    <div class="col-span-full xl:col-auto">
-                        <div class="p-4 mb-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
-                            <div class="items-center sm:flex xl:block 2xl:flex sm:space-x-4 xl:space-x-0 2xl:space-x-4">
-                                <img class="mb-4 w-28 h-28 rounded-lg sm:mb-0 xl:mb-4 2xl:mb-0" src="../assets/img/<?php if ($user['gender'] == 'male') {
-                                                                                                                        echo ('male_avatar.png');
-                                                                                                                    } elseif ($user['gender'] == 'female') {
-                                                                                                                        echo ('female_avatar.png');
-                                                                                                                    } else {
-                                                                                                                        echo ('other_avatar.png');
-                                                                                                                    } ?>" alt="Avatar">
-                                <div>
-                                    <h3 class="mb-1 text-2xl font-bold text-gray-900 dark:text-white"><?= $user['first_name'] . " " . $user['last_name'] ?></h3>
-                                    <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                                        <?= $user['email'] ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-4 mb-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
-                            <div class="flow-root">
-                                <h3 class="text-xl font-bold dark:text-white">Data</h3>
-                                <ul class="divide-y divide-gray-200 dark:divide-gray-700">
-                                    <li class="py-4">
-                                        <div class="flex items-center space-x-4">
-                                            <div class="flex-shrink-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 dark:text-white">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                                                </svg>
-
-                                            </div>
-                                            <div class="flex-1 min-w-0">
-                                                <span class="block text-base font-semibold text-gray-900 truncate dark:text-white">
-                                                    File #5415
-                                                </span>
-                                                <span class="block text-sm font-normal text-gray-500 truncate dark:text-gray-400">
-                                                    Uploaded 08/10/2023 at 23:04
-                                                </span>
-                                            </div>
-                                            <div class="inline-flex items-center">
-                                                <a href="#" class="py-2 px-3 mr-3 mb-3 text-sm font-medium text-center text-red-900 bg-white rounded-lg border border-red-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-red-400 dark:border-red-400 dark:hover:text-white dark:hover:bg-gray-700">Delete</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="py-4">
-                                        <div class="flex items-center space-x-4">
-                                            <div class="flex-shrink-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 dark:text-white">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                                                </svg>
-
-                                            </div>
-                                            <div class="flex-1 min-w-0">
-                                                <span class="block text-base font-semibold text-gray-900 truncate dark:text-white">
-                                                    File #4674
-                                                </span>
-                                                <span class="block text-sm font-normal text-gray-500 truncate dark:text-gray-400">
-                                                    Uploaded 07/10/2023 at 19:28
-                                                </span>
-                                            </div>
-                                            <div class="inline-flex items-center">
-                                                <a href="#" class="py-2 px-3 mr-3 mb-3 text-sm font-medium text-center text-red-900 bg-white rounded-lg border border-red-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-red-400 dark:border-red-400 dark:hover:text-white dark:hover:bg-gray-700">Delete</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="py-4">
-                                        <div class="flex items-center space-x-4">
-                                            <div class="flex-shrink-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 dark:text-white">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                                                </svg>
-
-                                            </div>
-                                            <div class="flex-1 min-w-0">
-                                                <span class="block text-base font-semibold text-gray-900 truncate dark:text-white">
-                                                    File #3874
-                                                </span>
-                                                <span class="block text-sm font-normal text-gray-500 truncate dark:text-gray-400">
-                                                    Uploaded 24/09/2023 at 13:19
-                                                </span>
-                                            </div>
-                                            <div class="inline-flex items-center">
-                                                <a href="#" class="py-2 px-3 mr-3 mb-3 text-sm font-medium text-center text-red-900 bg-white rounded-lg border border-red-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-red-400 dark:border-red-400 dark:hover:text-white dark:hover:bg-gray-700">Delete</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="py-4">
-                                        <div class="flex items-center space-x-4">
-                                            <div class="flex-shrink-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 dark:text-white">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                                                </svg>
-
-                                            </div>
-                                            <div class="flex-1 min-w-0">
-                                                <span class="block text-base font-semibold text-gray-900 truncate dark:text-white">
-                                                    File #1287
-                                                </span>
-                                                <span class="block text-sm font-normal text-gray-500 truncate dark:text-gray-400">
-                                                    Uploaded 19/09/2023 at 08:57
-                                                </span>
-                                            </div>
-                                            <div class="inline-flex items-center">
-                                                <a href="#" class="py-2 px-3 mr-3 mb-3 text-sm font-medium text-center text-red-900 bg-white rounded-lg border border-red-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-red-400 dark:border-red-400 dark:hover:text-white dark:hover:bg-gray-700">Delete</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-2">
-                        <div class="p-4 mb-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
-                            <h3 class="mb-4 text-xl font-bold dark:text-white">General information</h3>
-                            <form action="#">
-                                <div class="grid grid-cols-6 gap-6">
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <label for="firstname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
-                                        <input value="<?= $user['first_name'] ?>" type="text" name="firstname" id="firstname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Jean" required>
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <label for="lastname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
-                                        <input value="<?= $user['last_name'] ?>" type="text" name="lastname" id="lastname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dupont" required>
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <label for="gender" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choose a gender</label>
-                                        <select name="gender" id="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-                                            <option disabled>Select an
-                                                option</option>
-                                            <option <?php if ($user['gender'] == 'male') {
-                                                        echo ("selected");
-                                                    } ?> value="male">Male</option>
-                                            <option <?php if ($user['gender'] == 'female') {
-                                                        echo ("selected");
-                                                    } ?> value="female">Female</option>
-                                            <option <?php if ($user['gender'] == 'other') {
-                                                        echo ("selected");
-                                                    } ?> value="other">Prefer not to say</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <label for="birthdate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Birthdate</label>
-                                        <div class="relative">
-                                            <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-                                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                                </svg>
-                                            </div>
-                                            <input value="<?=date('d/M/Y', strtotime($user['birthdate'])) ?>" name="birthdate" id="birthdate" datepicker datepicker-autohide datepicker-format="dd/mm/yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
-                                        </div>
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-3">
-                                    <label for="weight"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Weight</label>
-                                <input value="<?=$user['weight'] ?>" type="number" name="weight" id="weight"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-purple-600 focus:border-purple-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="kg" required="">
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-3">
-                                    <label for="height"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Height</label>
-                                <input value="<?=$user['height'] ?>" type="number" name="height" id="height"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-purple-600 focus:border-purple-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="cm" required="">
-                                    </div>
-                                    <div class="col-span-6 sm:col-full">
-                                        <button type="button" class="w-full text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700">Save</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="p-4 mb-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
-                            <h3 class="mb-4 text-xl font-bold dark:text-white">Security settings</h3>
-                            <form action="#">
-                                <div class="grid grid-cols-6 gap-6">
-                                <div class="col-span-6 sm:col-span-3">
-                                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                                        <input value="<?=$user['email'] ?>" type="email" name="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="••••••••" required>
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <label for="current-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Current password</label>
-                                        <input type="text" name="current-password" id="current-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="••••••••" required>
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <label for="new-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">New password</label>
-                                        <input type="text" name="new-password" id="new-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="••••••••" required>
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-3">
-                                        <label for="confirm-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
-                                        <input type="text" name="confirm-password" id="confirm-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="••••••••" required>
-                                    </div>
-                                    <div class="col-span-6 sm:col-full">
-                                    <button type="button" class="w-full text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700">Save</button>
-                                    </div>
-                                </div>
-                            </form>
+    <div class="grid grid-cols-1 px-4 pt-6 xl:grid-cols-3 xl:gap-4">
+        <!-- Right Content -->
+        <div class="col-span-full xl:col-auto">
+            <div class="p-4 mb-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
+                <div class="items-center sm:flex xl:block 2xl:flex sm:space-x-4 xl:space-x-0 2xl:space-x-4">
+                    <img class="mb-4 w-28 h-28 rounded-lg sm:mb-0 xl:mb-4 2xl:mb-0" src="../assets/img/<?php if ($user['gender'] == 'male') {
+                                                                                                            echo ('male_avatar.png');
+                                                                                                        } elseif ($user['gender'] == 'female') {
+                                                                                                            echo ('female_avatar.png');
+                                                                                                        } else {
+                                                                                                            echo ('other_avatar.png');
+                                                                                                        } ?>" alt="Avatar">
+                    <div>
+                        <h3 class="mb-1 text-2xl font-bold text-gray-900 dark:text-white"><?= $user['first_name'] . " " . $user['last_name'] ?></h3>
+                        <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                            <?= $user['email'] ?>
                         </div>
                     </div>
                 </div>
-            <p class="my-10 text-sm text-center text-gray-900 sticky top-[97vh]">
-                &copy; <?= date("Y"); ?> Sport Track
-            </p>
+            </div>
+            <div class="p-4 mb-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
+                <div class="items-center sm:flex xl:block 2xl:flex sm:space-x-4 xl:space-x-0 2xl:space-x-4">
+                    <img class="mb-4 w-28 h-28 rounded-lg sm:mb-0 xl:mb-4 2xl:mb-0" src="../assets/img/<?php if ($user['gender'] == 'male') {
+                                                                                                            echo ('male_avatar.png');
+                                                                                                        } elseif ($user['gender'] == 'female') {
+                                                                                                            echo ('female_avatar.png');
+                                                                                                        } else {
+                                                                                                            echo ('other_avatar.png');
+                                                                                                        } ?>" alt="Avatar">
+                    <div>
+                        <h3 class="mb-1 text-2xl font-bold text-gray-900 dark:text-white"><?= $user['first_name'] . " " . $user['last_name'] ?></h3>
+                        <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                            <?= $user['email'] ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 mb-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
+                <div class="flow-root">
+                    <h3 class="text-xl font-bold dark:text-white">Data</h3>
+                    <ul class="divide-y divide-gray-200 dark:divide-gray-700">
+                        <li class="py-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 dark:text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                    </svg>
 
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <span class="block text-base font-semibold text-gray-900 truncate dark:text-white">
+                                        File #5415
+                                    </span>
+                                    <span class="block text-sm font-normal text-gray-500 truncate dark:text-gray-400">
+                                        Uploaded 08/10/2023 at 23:04
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center">
+                                    <a href="#" class="py-2 px-3 mr-3 mb-3 text-sm font-medium text-center text-red-900 bg-white rounded-lg border border-red-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-red-400 dark:border-red-400 dark:hover:text-white dark:hover:bg-gray-700">Delete</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 dark:text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                    </svg>
 
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <span class="block text-base font-semibold text-gray-900 truncate dark:text-white">
+                                        File #4674
+                                    </span>
+                                    <span class="block text-sm font-normal text-gray-500 truncate dark:text-gray-400">
+                                        Uploaded 07/10/2023 at 19:28
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center">
+                                    <a href="#" class="py-2 px-3 mr-3 mb-3 text-sm font-medium text-center text-red-900 bg-white rounded-lg border border-red-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-red-400 dark:border-red-400 dark:hover:text-white dark:hover:bg-gray-700">Delete</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 dark:text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                    </svg>
+
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <span class="block text-base font-semibold text-gray-900 truncate dark:text-white">
+                                        File #3874
+                                    </span>
+                                    <span class="block text-sm font-normal text-gray-500 truncate dark:text-gray-400">
+                                        Uploaded 24/09/2023 at 13:19
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center">
+                                    <a href="#" class="py-2 px-3 mr-3 mb-3 text-sm font-medium text-center text-red-900 bg-white rounded-lg border border-red-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-red-400 dark:border-red-400 dark:hover:text-white dark:hover:bg-gray-700">Delete</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 dark:text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                    </svg>
+
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <span class="block text-base font-semibold text-gray-900 truncate dark:text-white">
+                                        File #1287
+                                    </span>
+                                    <span class="block text-sm font-normal text-gray-500 truncate dark:text-gray-400">
+                                        Uploaded 19/09/2023 at 08:57
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center">
+                                    <a href="#" class="py-2 px-3 mr-3 mb-3 text-sm font-medium text-center text-red-900 bg-white rounded-lg border border-red-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-red-400 dark:border-red-400 dark:hover:text-white dark:hover:bg-gray-700">Delete</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-2">
+            <div class="p-4 mb-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
+                <h3 class="mb-4 text-xl font-bold dark:text-white">General information</h3>
+                <form action="#">
+                    <div class="grid grid-cols-6 gap-6">
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="firstname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
+                            <input value="<?= $user['first_name'] ?>" type="text" name="firstname" id="firstname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Jean" required>
+                        </div>
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="lastname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
+                            <input value="<?= $user['last_name'] ?>" type="text" name="lastname" id="lastname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Dupont" required>
+                        </div>
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="gender" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choose a gender</label>
+                            <select name="gender" id="gender" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                                <option disabled>Select an
+                                    option</option>
+                                <option <?php if ($user['gender'] == 'male') {
+                                            echo ("selected");
+                                        } ?> value="male">Male</option>
+                                <option <?php if ($user['gender'] == 'female') {
+                                            echo ("selected");
+                                        } ?> value="female">Female</option>
+                                <option <?php if ($user['gender'] == 'other') {
+                                            echo ("selected");
+                                        } ?> value="other">Prefer not to say</option>
+                            </select>
+                        </div>
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="birthdate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Birthdate</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                    </svg>
+                                </div>
+                                <input value="<?= date('d/M/Y', strtotime($user['birthdate'])) ?>" name="birthdate" id="birthdate" datepicker datepicker-autohide datepicker-format="dd/mm/yyyy" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+                            </div>
+                        </div>
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Weight</label>
+                            <input value="<?= $user['weight'] ?>" type="number" name="weight" id="weight" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-purple-600 focus:border-purple-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="kg" required="">
+                        </div>
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="height" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Height</label>
+                            <input value="<?= $user['height'] ?>" type="number" name="height" id="height" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-purple-600 focus:border-purple-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="cm" required="">
+                        </div>
+                        <div class="col-span-6 sm:col-full">
+                            <button type="button" class="w-full text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="p-4 mb-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
+                <h3 class="mb-4 text-xl font-bold dark:text-white">Security settings</h3>
+                <form action="#">
+                    <div class="grid grid-cols-6 gap-6">
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                            <input value="<?= $user['email'] ?>" type="email" name="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="••••••••" required>
+                        </div>
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="current-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Current password</label>
+                            <input type="text" name="current-password" id="current-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="••••••••" required>
+                        </div>
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="new-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">New password</label>
+                            <input type="text" name="new-password" id="new-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="••••••••" required>
+                        </div>
+                        <div class="col-span-6 sm:col-span-3">
+                            <label for="confirm-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
+                            <input type="text" name="confirm-password" id="confirm-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="••••••••" required>
+                        </div>
+                        <div class="col-span-6 sm:col-full">
+                            <button type="button" class="w-full text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
