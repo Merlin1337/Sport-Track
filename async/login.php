@@ -4,7 +4,7 @@ require("config.php");
 
 if (check_login()) {
     header("Location: ../dashboard");
-    exit;
+    exit();
 }
 
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
@@ -17,6 +17,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
     if ($req->rowCount() > 0) {
         $user = $req->fetch();
+
         if (password_verify($password, $user['password'])) {
 
             $_SESSION['id'] = $user['id']; // Assign login data to user session
@@ -31,22 +32,22 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
                 setcookie('autologin', $autologin, time() + 7 * 24 * 60 * 60, '/', $_SERVER['HTTP_HOST'], false, true); // /!\ Penser à changer false en true (secure => localhost / domaine) + LOGOUT
             }
 
-            header("Location: /dashboard");
+            header("Location: ../dashboard");
             die; // Redirect login after success
 
         } else {
-            header("Location: ../login?error=password");
-            exit;
+            header("Location: ../login.php?error=password");
+            exit();
         }
     } else {
-        header("../login.php?error=exist");
-        exit;
+        header("Location: ../login.php?error=exist");
+        exit();
     }
 } else {
     header("Location: ../login.php?error=captcha");
-    exit;
+    exit();
 }
 } else {
     header("Location: ../login.php?error=fields");
-    exit;
+    exit();
 }

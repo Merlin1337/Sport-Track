@@ -3,7 +3,7 @@
 require("../async/config.php");
 
 if (!check_login()) {
-    header("Location: ../login.php"); exit;
+    header("Location: ../login.php"); exit();
 }
 
 ?>
