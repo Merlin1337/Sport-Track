@@ -8,7 +8,7 @@ if (!empty($_POST['email'])) {
     
       $req = $bdd->prepare("UPDATE users SET email = ? WHERE id = ?");
       $req->execute(array($email, $user['id']));
-      header("Location: ../dashboard/account.php?=success-email"); exit();
+      header("Location: ../dashboard/account.php?status=success-email"); exit();
       
     } else {
       header("Location: ../dashboard/account.php?status=format");
