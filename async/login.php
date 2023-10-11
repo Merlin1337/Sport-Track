@@ -33,7 +33,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
             }
 
             header("Location: ../dashboard");
-            die; // Redirect login after success
+            exit(); // Redirect login after success
 
         } else {
             header("Location: ../login.php?error=password");
