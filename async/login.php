@@ -32,22 +32,22 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
                 setcookie('autologin', $autologin, time() + 7 * 24 * 60 * 60, '/', $_SERVER['HTTP_HOST'], false, true); // /!\ Penser à changer false en true (secure => localhost / domaine) + LOGOUT
             }
 
-            header("Location: ../dashboard");
+            header("Location: ../dashboard/?status=login-success"); 
             exit(); // Redirect login after success
 
         } else {
-            header("Location: ../login.php?error=password");
+            header("Location: ../login.php?status=password");
             exit();
         }
     } else {
-        header("Location: ../login.php?error=exist");
+        header("Location: ../login.php?status=exist");
         exit();
     }
 } else {
-    header("Location: ../login.php?error=captcha");
+    header("Location: ../login.php?status=captcha");
     exit();
 }
 } else {
-    header("Location: ../login.php?error=fields");
+    header("Location: ../login.php?status=fields");
     exit();
 }

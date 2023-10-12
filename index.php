@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
 <body class="bg-gradient-to-br from-[#77c2f7] to-[#d98bf7] ">
 
 <nav class="shadow">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="home">
       <div class="flex justify-between h-16">
         <div class="flex">
           <div class="flex-shrink-0 flex items-center">
@@ -28,10 +28,10 @@
                 Sport Track
             </a>
           </div>
-          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-            <a href="#" class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"> Home </a>
-            <a href="#" class="border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-800 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"> Features </a>
-            <a href="#" class="border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-800 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"> About us </a>
+          <div class="hidden md:ml-6 md:flex md:space-x-8">
+            <a href="#home" class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"> Home </a>
+            <a href="#features" class="border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-800 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"> Features </a>
+            <a href="#about-us" class="border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-800 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"> About us </a>
           </div>
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:items-center">
@@ -74,7 +74,7 @@
                 <div class="mt-12 max-w-lg w-full flex">
                   <a href="register.php" class="text-white bg-gray-800 hover:bg-gray-900 font-medium rounded-lg text-md w-full py-2.5 text-center dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Get started</a>
                 </div>
-                <div class="mt-6">
+                <div class="hidden sm:flex sm:mt-6">
                   <div class="inline-flex items-center divide-x divide-gray-600">
                     <div class="flex-shrink-0 flex pr-5">
                       <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -94,6 +94,11 @@
                       </svg>
                     </div>
                     <div class="min-w-0 flex-1 pl-5 py-1 text-sm text-gray-500 sm:py-3"><span class="font-medium text-gray-900">Rated 5 stars</span> by over <span class="font-medium text-indigo-600">2 beta users</span></div>
+                  </div>
+                </div>
+                <div class="sm:hidden mt-6">
+                  <div class="inline-flex items-center divide-x divide-gray-600">
+                    <div class="min-w-0 flex-1 py-1 text-sm text-gray-500 sm:py-3"><span class="text-gray-900">Already have an account ?</span><a href="login.php" class="font-medium text-indigo-600"> Login here</a></div>
                   </div>
                 </div>
               </div>
@@ -123,7 +128,7 @@
 
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
-          <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+          <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col" id="features">
             <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
@@ -159,7 +164,7 @@
 
 
 <section class="text-gray-600 body-font mt-10">
-  <div class="container px-5 py-24 mx-auto flex flex-col">
+  <div class="container px-5 py-24 mx-auto flex flex-col" id="about-us">
     <div class="lg:w-4/6 mx-auto">
       <div class="rounded-lg h-64 overflow-hidden">
         <img alt="content" class="object-cover object-center h-full w-full" src="https://wallpapers.com/images/featured/cat-g9rdx9uk2425fip2.jpg">
@@ -182,7 +187,7 @@
 </section>
       <footer>
         <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-          <p class="mt-8 text-center text-base text-black">&copy; <?=date("Y"); ?> Sport Track</p>
+          <p class="mt-8 text-center text-base text-gray-600">&copy; <?=date("Y"); ?> <b>Sport Track</b>, powered by A&M LLC 🚀</p>
         </div>
       </footer>
       

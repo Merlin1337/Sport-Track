@@ -47,35 +47,35 @@ if (!empty($_POST['lastname']) && !empty($_POST['firstname']) && !empty($_POST['
 
                     setcookie('autologin', $autologin, time() + 7 * 24 * 60 * 60, '/', $_SERVER['HTTP_HOST'], false, true); // /!\ Penser à changer false en true (secure => localhost / domaine
 
-                    header("Location: ../dashboard/?success"); 
+                    header("Location: ../dashboard/?status=register-success"); 
                     exit();
                 }
               } else {
-                header("Location: ../register?error=exist");
+                header("Location: ../register.php?status=exist");
                 exit();
               }
             }
           } else {
-            header("Location: ../register?error=password");
+            header("Location: ../register.php?status=password");
             exit();
           }
         } else {
-          header("Location: ../register?error=gender");
+          header("Location: ../register.php?status=gender");
           exit();
         }
       } else {
-        header("Location: ../register?error=invalid-value");
+        header("Location: ../register.php?status=invalid-value");
         exit();
       }
     } else {
-      header("Location: ../register?error=email");
+      header("Location: ../register.php?status=format");
       exit();
     }
   } else {
-    header("Location: ../register?error=captcha");
+    header("Location: ../register.php?status=captcha");
     exit();
   }
 } else {
-  header("Location: ../register?error=fields");
+  header("Location: ../register.php?status=fields");
   exit();
 }
