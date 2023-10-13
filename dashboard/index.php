@@ -89,8 +89,8 @@ if (isset($_GET['status'])) {
         </div>
         </div>
 <?php } } ?>
-<h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Upload your <span class="text-transparent bg-clip-text font-black bg-gradient-to-r to-red-800 from-purple-900">data</span></h1>
-<p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Keep an eye on all your data with Sport Track, the new app powered by A&M LLC.</p>
+<h1 class="mb-4 text-3xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl">Upload your <span class="text-transparent bg-clip-text font-black bg-gradient-to-r to-red-800 from-purple-900">data</span></h1>
+<p class="text-lg font-normal text-gray-500 lg:text-xl">Keep an eye on all your data with Sport Track, the new app powered by A&M LLC.</p>
 <form action="../async/upload.php" method="post" class="flex items-center justify-center w-full mt-6" id="form" enctype="multipart/form-data">
 
             <label for="data" class="flex flex-col items-center justify-center w-full sm:w-11/12 h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
