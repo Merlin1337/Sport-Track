@@ -20,10 +20,13 @@ Les fonctionnalités de l’application SportTrack sont les suivantes :
 ## Screenshots
 
 <div>
-    <img width="23%" src="fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot1.png">
-    <img width="23%" src="fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot2.png">
-    <img width="23%" src="fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot3.png">
-    <img width="23%" src="fastlane/metadata/android/en-US/images/phoneScreenshots/screenshot4.png">
+    <img width="45%" src="assets/screenshots/home.png">
+    <img width="45%" src="assets/screenshots/features.png">
+    <img width="45%" src="assets/screenshots/about_us.png">
+    <img width="45%" src="assets/screenshots/login.png">
+    <img width="45%" src="assets/screenshots/register.png">
+    <img width="45%" src="assets/screenshots/upload.png">
+    <img width="45%" src="assets/screenshots/account.png">
 </div>
 
 ## Création
