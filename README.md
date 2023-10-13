@@ -34,7 +34,7 @@ Les fonctionnalités de l’application SportTrack sont les suivantes :
 
 ## Création
 ### Aspect graphique
-Pour développer le front-end (aspect graphique) du site, nous avons utilisé le framework CSS Tailwind. Une fois le framework importé via le CDN officiel du framework (Content Delivery Network - Serveur qui met à disposition du contenu à des utilisateurs), nous avons utilisé des composants mis à disposition sur plusieurs sites dont Flowbite, TailwindUI et TailblocksCC.
+Pour développer le front-end (aspect graphique) du site, nous avons utilisé le framework CSS Tailwind. Une fois le framework importé via le CDN officiel du framework (Content Delivery Network - Serveur qui met à disposition du contenu à des utilisateurs), nous avons utilisé des composants mis à disposition sur plusieurs sites dont [Flowbite](https://flowbite.com/), [TailwindUI](https://tailwindui.com) et [TailblocksCC](https://tailblock.cc/).
 ### Formulaires
 Nous avons tout d'abord réalisé la structure des formulaires en HTML avec les attributs dédiés à chaque champ (password, number, text, email). Par la suite, les formulaires ont été traité en PHP via la méthode POST et les données insérées dans une base de données MySQL (la structure de la base de données est téléchargeable depuis le répertoire GitLab). Afin d'obtenir une sécurité optimale, les données entrées par l'utilisateur sont vérifiés en PHP (type, complexité du mot de passe, format de l'email, etc.). Pour que l'utilisateur soit informé des différentes erreurs rencontrées, nous l'avons redirigé à travers des pages qui utilisent la méthode GET pour afficher les messages d'erreurs. 
 <img src="assets/screenshots/error_message.png" width="75%">
