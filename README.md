@@ -43,4 +43,4 @@ Le système de téléversement de fichier est également géré par MiaouPHP, qu
 Afin de pouvoir gérer le système de suppression de fichier, nous avons fait le choix d'attribuer un identifiant unique à chaque fichier. Ainsi, nous avons pu stocker cet identifiant, la date et l'heure de mise en ligne du fichier dans la base de données du site. Cela permet à l'utilisateur d'avoir des informations sur les fichiers qu'il a pu téléverser, ainsi que la possibilité de les supprimer.
 
 ## Ressources
-Afin de nous initier aux différents langages utilisés, nous avons utilisé [W3School](https://www.w3schools.com/), la documentation officielle de [PHP](https://www.php.net/) et de [TailwindCSS](https://v2.tailwindcss.com/docs).
+Afin de nous initier aux différents langages utilisés, nous avons utilisé [W3School](https://www.w3schools.com/), la documentation officielle de [PHP](https://www.php.net/) et de [TailwindCSS](https://v2.tailwindcss.com/docs). [Stackoverflow](https://stackoverflow.com/) nous a également été d'une grande d'aide lors des différents problèmes rencontrés.
