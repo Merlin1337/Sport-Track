@@ -3,7 +3,8 @@
 require("config.php");
 
 if (!empty($_POST['email'])) {
-  if ($_POST['email'] != $user['email']) {
+  $email = $_POST['email'];
+  if ($email != $user['email']) {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) { 
     
       $req = $bdd->prepare("UPDATE users SET email = ? WHERE id = ?");
