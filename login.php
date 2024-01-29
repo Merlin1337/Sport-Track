@@ -97,7 +97,7 @@ if (isset($_GET['status'])) {
                             <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-purple-600 focus:border-purple-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
                         </div>
                         <div class="text-center">
-                            <div class="g-recaptcha inline-block" data-sitekey="6LckjHUoAAAAAPre1ofPGHnt1R4UUkg8ofhdnlgb"></div>
+                            <div class="g-recaptcha inline-block" data-sitekey="PUBLIC_API_KEY"></div>
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="flex items-start">
