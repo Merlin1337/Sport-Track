@@ -1,5 +1,5 @@
 # <img src="assets/img/logo.png" height="30"> Sport Track
-Dans le cadre de travaux pratiques de la ressource R3.01, nous avons eu à développer une application Web de suivi d’activités sportives. Cette application permet à des sportifs disposant d’une montre “cardio/gps” de pouvoir sauvegarder et gérer des données de position et de fréquence cardiaque.
+Dans le cadre de travaux pratiques de la ressource R1.02 de notre BUT informatique, nous avons eu à développer une application Web de suivi d’activités sportives. Cette application permet à des sportifs disposant d’une montre “cardio/gps” de pouvoir sauvegarder et gérer des données de position et de fréquence cardiaque.
 
 ## Démo en ligne 🌐
 Une version du projet est disponible en ligne : [www.sport-track.online](https://sport-track.online)
