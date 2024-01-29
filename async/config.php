@@ -3,14 +3,14 @@
 session_start();
 
 try {
-    $bdd = new PDO('mysql:host=localhost;dbname=sporttrack;charset=utf8', 'lou', 'Linux4018!');
+    $bdd = new PDO('mysql:host=localhost;dbname=sporttrack;charset=utf8', 'username', 'password');
 } catch(Exception $e) {
     die('Erreur : '.$e->getMessage());
 }
 
 // Google Recaptcha
 function recaptcha() {
-    $secret = '6LckjHUoAAAAAFjAE1gcDtYh1ac48-6iXKbh2Aax';
+    $secret = 'SECRET_API_KEY';
     $response = $_POST['g-recaptcha-response'];
     $remoteip = $_SERVER['REMOTE_ADDR'];
 
