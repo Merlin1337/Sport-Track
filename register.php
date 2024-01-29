@@ -209,7 +209,7 @@ if (check_login()) {
                                 required="">
                         </div>
                         <div class="text-center">
-                            <div class="g-recaptcha inline-block" data-sitekey="6LckjHUoAAAAAPre1ofPGHnt1R4UUkg8ofhdnlgb"></div>
+                            <div class="g-recaptcha inline-block" data-sitekey="PUBLIC_API_KEY"></div>
                         </div>
                         <button type="submit"
                             class="w-full text-white bg-[#b67df0] hover:bg-[#ae6cf0] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create
