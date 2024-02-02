@@ -4,7 +4,7 @@ Dans le cadre de travaux pratiques de la ressource R1.02 de notre BUT informatiq
 ## Démo en ligne 🌐
 Une version du projet est disponible en ligne : [www.sport-track.online](https://sport-track.online)
 
-## Fonctionnalités
+## Fonctionnalités 📋
 Les fonctionnalités de l’application SportTrack sont les suivantes :
 * __Gestion des comptes utilisateurs :__ L’application permet de créer, modifier et supprimer un compte utilisateur. Lors de la création de compte, les utilisateurs peuvent renseigner les informations suivantes :
     * Nom
@@ -20,7 +20,7 @@ Les fonctionnalités de l’application SportTrack sont les suivantes :
 
 * __Gestion des fichiers de données :__ Après s’être connectés à l’application, les utilisateurs peuvent déposer et supprimer des fichiers d’activité sportive.
 
-## Screenshots
+## Screenshots 📸
 
 <div>
     <img width="45%" src="assets/screenshots/home.png">
@@ -32,7 +32,7 @@ Les fonctionnalités de l’application SportTrack sont les suivantes :
     <img width="45%" src="assets/screenshots/account.png">
 </div>
 
-## Création
+## Création 🎨
 ### Aspect graphique
 Pour développer le front-end (aspect graphique) du site, nous avons utilisé le framework CSS Tailwind. Une fois le framework importé via le CDN officiel du framework (Content Delivery Network - Serveur qui met à disposition du contenu à des utilisateurs), nous avons utilisé des composants mis à disposition sur plusieurs sites dont [Flowbite](https://flowbite.com/), [TailwindUI](https://tailwindui.com) et [TailblocksCC](https://tailblocks.cc/).
 ### Formulaires
@@ -42,5 +42,5 @@ Nous avons tout d'abord réalisé la structure des formulaires en HTML avec les 
 Le système de téléversement de fichier est également géré par MiaouPHP, qui vérifie l'extension du fichier (".json").
 Afin de pouvoir gérer le système de suppression de fichier, nous avons fait le choix d'attribuer un identifiant unique à chaque fichier. Ainsi, nous avons pu stocker cet identifiant, la date et l'heure de mise en ligne du fichier dans la base de données du site. Cela permet à l'utilisateur d'avoir des informations sur les fichiers qu'il a pu téléverser, ainsi que la possibilité de les supprimer.
 
-## Ressources
+## Ressources 📄
 Afin de nous initier aux différents langages utilisés, nous avons utilisé [W3School](https://www.w3schools.com/), la documentation officielle de [PHP](https://www.php.net/) et de [TailwindCSS](https://v2.tailwindcss.com/docs). [Stackoverflow](https://stackoverflow.com/) nous a également été d'une grande d'aide lors des différents problèmes rencontrés.
